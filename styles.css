@@ -1,0 +1,169 @@
+:root {
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1f2a37;
+    --muted: #5b667a;
+    --primary: #2f6fed;
+    --primary-deep: #1f4db4;
+    --border: #dbe2ef;
+    --shadow: 0 10px 30px rgba(26, 48, 93, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.6;
+}
+
+.hero {
+    background: linear-gradient(130deg, #0f1f4a 0%, #244fbd 60%, #4a7ff0 100%);
+    color: #fff;
+    padding: 1.2rem 1.2rem 4rem;
+}
+
+.navbar {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #e8edff;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.navbar a:hover {
+    color: #ffffff;
+}
+
+.hero-content {
+    max-width: 1080px;
+    margin: 4rem auto 0;
+}
+
+.hero-content h1 {
+    margin-bottom: 0.7rem;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.hero-content p {
+    color: #d7e1ff;
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background: #ffffff;
+    color: var(--primary-deep);
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #e6ecff;
+}
+
+main {
+    max-width: 1080px;
+    margin: -2rem auto 0;
+    padding: 0 1.2rem 3rem;
+}
+
+.section {
+    margin-top: 2rem;
+}
+
+h2 {
+    margin: 0 0 1rem;
+    font-size: 1.6rem;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.skills-grid,
+.portfolio-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.2rem;
+    box-shadow: var(--shadow);
+}
+
+.skill-card h3,
+.project-card h3 {
+    margin-top: 0;
+}
+
+.tag {
+    display: inline-block;
+    margin-top: 0.8rem;
+    background: #ebf1ff;
+    color: var(--primary-deep);
+    padding: 0.24rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.82rem;
+}
+
+.project-card a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-card a:hover {
+    color: var(--primary-deep);
+}
+
+.footer {
+    background: #111c3a;
+    color: #e2e8ff;
+    text-align: center;
+    padding: 1.4rem 1rem;
+}
+
+.footer p {
+    margin: 0.2rem 0;
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+}
